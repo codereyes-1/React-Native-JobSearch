@@ -1,0 +1,125 @@
+React Native mobile app
+
+
+Using JSearch from RapidAPI 
+
+In RN, 
+instead of rendering HTML elements you render native mobile components
+
+
+import React from 'react'
+import { View, Text} from 'react-native'
+
+functional component called App that returns text component wrapped inside the view component
+and using the JSX syntax, allows you to write HTML-like code within JavaScript
+
+const App = () => {
+ return (
+    <View>
+     <Text> Hello World! </Text>
+    <View>
+ )
+}
+
+
+Text: while in react we use <h1> or <p> tags for text, in react native use the text component instead
+used to display text in the app can style using same css like syntax as in react set font size color and weight 
+
+<View> 
+used to create container or 'view' for the other components
+
+A box or container that holds other components
+similar to div element in html but with added functionality specifically for mobile apps
+
+often used to crate layout structures for other components
+many props that can be used to control appearance and behavior 
+uses flexbox layout by default
+
+Makes it easy to control how its child components are laid out within the container 
+
+touchable components used for creating buttons links other interactive elements
+
+RN no buttons, instead touchable opacity 
+'button' opacity will fade when pressed
+
+cousin of button component in react 
+
+but w/ more customization and flexibility 
+
+ex of create own button component in react native 
+
+
+import React from 'react';
+import { TouchableOpacity, Text } from 'react-native';
+
+function MyButton(props) {
+    return (
+        <TouchableOpacity onPress={props.onPress}>
+         <Text>{props.label}</Text>
+        </TouchableOpacity>
+    );
+}
+
+
+Activity Indicator
+spinner or loading indicator in app
+full customizable
+
+size and color of spinner by setting size and color props 
+
+two really important components on our list
+Flatlist: render long list of items to scroll efficiently. like map function in react but extra features like:
+
+optimized scroll performance, item separation 
+
+
+When to use flatlist and when map?
+
+Large list smooth scrolling use flatlist 
+
+smaller lists use map function 
+
+
+ScrollView:
+magic box that holds multiple components and views, providing a scrolling container for them
+
+like overflow: scroll in HTML
+
+easy nav thru list of items or large amount of content in our app 
+
+makes sure users can easily explore all the content, making app more intuitive and user-friendly
+
+
+SafeAreaView:
+
+safe zone to render app's content w/out being covered by device's hardware features like the notch, home indicator or status bar 
+
+
+
+add app/index.js _layout.js
+
+
+import { Stack } from 'expo-router'
+
+export default function Layout() {
+    return <Stack />
+    
+}
+
+later will use this stack to link to other pages in our app
+
+
+install this:
+npm i expo-font axios react-native-dotenv  
+dotenv for env vars 
+
+
+
+"axios": "^1.4.0",
+    expo expo-constants expo-font expo-linking expo-router expo-splash-screen expo-status-bar react react-dom react-native react-native-dotenv react-native-gesture-handler react-native-reanimated react-native-safe-area-context react-native-screens react-native-web
+
+
+
+
+@babel/core
+@babel/plugin-proposal-export-namespace-from
