@@ -19,7 +19,7 @@ const useFetch = (endpoint, query) => {
         method: 'GET',
         url: `https://jsearch.p.rapidapi.com/${endpoint}`,
         headers: {
-            'X-RapidAPI-Key': '2df6337812msh1c61603806bdeb5p1c19ddjsn1f079996fafe',
+            'X-RapidAPI-Key': 'fa1e2ab96dmsh96bd5cc1ef556a1p119727jsnafad7ef49560',
             'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
         },
         // pass dynamic query to API, spread query that was passed to this hook
