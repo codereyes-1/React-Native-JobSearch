@@ -14,6 +14,7 @@ import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome } from '../components
 // const home = functional component where we can return view with text inside
 const Home = () => {
     const router = useRouter();
+    const [searchTerm, setSearchTerm] = useState("")
     
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
@@ -37,9 +38,16 @@ const Home = () => {
                         flex: 1,
                         padding: SIZES.medium
                     }}>
-                    <Welcome
                     
-                    />
+                        <Welcome
+                            searchTerm={searchTerm}
+                            setSearchTerm={setSearchTerm}
+                            handleClick={() => {
+                                if(searchTerm) {
+                                    router.push(`/search/${searchTerm}`)
+                                }
+                            }}
+                        />
                     <Popularjobs />
                     <Nearbyjobs/>
 
