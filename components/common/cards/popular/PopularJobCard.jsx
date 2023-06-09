@@ -4,6 +4,11 @@ import styles from './popularjobcard.style'
 
 import { checkImageURL } from '../../../../utils'
 
+const handleCardPress = (item) => {
+  // Function logic to handle the card press event
+  console.log('Card pressed!', item);
+};
+
 const PopularJobCard = ({ item, selectedJob, handleCardPress}) => {
   return (
     <TouchableOpacity

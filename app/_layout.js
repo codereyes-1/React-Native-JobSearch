@@ -25,8 +25,3 @@ const Layout = () => {
 
 
 export default Layout
-
-// export default function Layout() {
-//     return <Stack />
-    
-// }
